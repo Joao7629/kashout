@@ -54,7 +54,7 @@ i {
 }
 
 .header-logo {
-  width: flex;
+  width: 200px;
   align-items: center;
   justify-content: center;
   margin-top: 40px;
@@ -116,9 +116,7 @@ i {
 }
 .hero h1 {
   text-align: center;
-  line-height: 150%;
-  max-width: 940px;
-  font-size: 46px;
+  width: 100%;
 }
 .hero p {
   text-align: center;
@@ -166,6 +164,8 @@ i {
   }
 }
 .sobre {
+  width: 120%;
+  padding-right: 20%;
   background-color: #06121e;
   overflow: hidden;
   color: #FFF;
@@ -179,7 +179,19 @@ i {
   padding: 34px 14px 64px 14px;
 }
 .sobre-content img {
-  width: 570px;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 80px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #06121e;
+  border-radius: 30px;
+  box-shadow: 0px -1px 50px -4px rgba(0, 0, 0, 0.45);
+}
+.sobre-content .sobre-content img:hover {
+  transform: scale(1.2);
+  z-index: 1;
 }
 
 .sobre-content div {
@@ -198,6 +210,18 @@ i {
 @media screen and (max-width: 768px) {
   .sobre-content {
     flex-direction: column;
+    padding-right: -80%;
+  }
+  h2 {
+    flex-direction: column;
+    padding-right: -80%;
+  }
+  img {
+    max-width: 200px;
+  }
+  .sobre-descriçao h2 {
+    margin-top: 80px;
+    text-align: center;
   }
 }
 .serviços {
@@ -221,7 +245,7 @@ i {
   line-height: 150%;
   margin-bottom: 14px;
   text-align: center;
-  max-width: 780px;
+  max-width: 880px;
 }
 
 .haircuts {
@@ -237,9 +261,8 @@ i {
   display: flex;
   flex-direction: column;
   background-color: #FFF;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
-  overflow: hidden;
 }
 .haircut img {
   width: 100%;
@@ -263,14 +286,14 @@ i {
 
 .haircut-info button {
   color: #FFF;
-  background-color: #56c850;
+  background-color: rgba(255, 0, 0, 0.822);
   padding: 4px 8px;
-  border-radius: 4px;
+  border-radius: 14px;
   border: 0;
   cursor: default;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 750px) {
   .haircuts {
     flex-direction: column;
   }
@@ -287,6 +310,9 @@ i {
   gap: 24px;
   color: #FFF;
 }
+.footer img {
+  width: 200px;
+}
 
 .footer-icons {
   display: flex;
@@ -294,14 +320,19 @@ i {
   color: #FFF;
 }
 
+@media screen and (max-width: 900px) {
+  .footer img {
+    width: 150px;
+  }
+}
 .btn-whats {
   position: fixed;
-  bottom: 14px;
+  bottom: 110px;
   right: 24px;
   z-index: 99;
 }
 .btn-whats img {
-  max-width: 74px;
+  max-width: 80px;
   transition: transform 0.4s;
 }
 .btn-whats img:hover {
@@ -331,6 +362,53 @@ i {
 @media screen and (max-width: 768px) {
   .btn-whats img {
     max-width: 64px;
+  }
+}
+.feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  padding-left: 230px;
+}
+.feedback h2 {
+  color: #06121e;
+}
+
+.feedbacks {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 50px 0px 34px 54px;
+  padding-right: 0px;
+}
+.feedbacks img {
+  width: 250px;
+  border-radius: 22px;
+  box-shadow: 0px -1px 80px -4px rgba(0, 0, 0, 0.45);
+}
+
+@media screen and (max-width: 1120px) {
+  .feedback {
+    flex-direction: column;
+  }
+  .feedback H2 {
+    margin-bottom: 100px;
+    color: #FFF;
+    padding-right: 230px;
+  }
+  .feedback .feedbacks {
+    padding-right: 470px;
+    width: 100%;
+  }
+  h2 {
+    width: -200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .serviços {
+    padding: 54px 14px;
   }
 }
 button {
@@ -402,4 +480,23 @@ body {
   height: 100vh;
   position: relative;
   background-color: #06121e;
+}
+
+body {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 915px) {
+  body {
+    display: block;
+    overflow-x: hidden;
+    width: 100vw;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=style.css.map */
